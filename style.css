@@ -1,0 +1,51 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+}
+
+.head {
+    font-weight: 800;
+}
+
+.link-input {
+    padding-top: 200px;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    background-color: #455864;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.logo {
+    height: 40px;
+    width: 80px;
+}
+
+.input-field {
+    margin: 20px auto;
+    height: 40px;
+    width: 90%;
+}
+.enter-button {
+    margin: 20px auto;
+    height: 45px;
+    width: 90%;
+    background-color: #FFC107;
+}
+
+button:hover {
+    background-color: #FFD773;
+}
+
+button {
+    color: #FFF;
+}
+
+.output-pane {
+    width: 50%;
+    background-color:#cfd8dc;
+    float: right;
+}
