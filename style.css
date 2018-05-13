@@ -1,9 +1,6 @@
 body {
+    margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 800;
-}
-
-.head {
     font-weight: 800;
 }
 
@@ -25,27 +22,73 @@ body {
 }
 
 .input-field {
+    font-size: xx-large;
     margin: 20px auto;
     height: 40px;
     width: 90%;
 }
+
 .enter-button {
+    font-size: x-large;
+    font-weight: 700;
     margin: 20px auto;
     height: 45px;
     width: 90%;
     background-color: #FFC107;
 }
 
-button:hover {
-    background-color: #FFD773;
-}
-
-button {
+.enter-button {
     color: #FFF;
 }
 
+.enter-button:enabled:hover {
+    background-color: #FFD773;
+}
+
 .output-pane {
+    overflow: scroll;
+    height: 100vh;
     width: 50%;
-    background-color:#cfd8dc;
+    background-color: #cfd8dc;
     float: right;
+    margin: 0;
+}
+
+.template {
+    height: 200px;
+    width: 90%;
+    border: 2px #607d8b solid;
+    background-color: #fff;
+    padding: 12px 20px;
+}
+
+.output-title {
+    padding: 12px 0;
+    border-bottom: 2px solid #f2f4f4;
+    color: #455a64;
+    font-weight: 700;
+    font-size: xx-large;
+}
+
+.output-url {
+    margin: 17px 0px;
+    padding: 20px 0px;
+    font-weight: 400;
+    font-size: x-large;
+    color: #607d8b;
+    border-bottom: 2px solid #f2f4f4;
+}
+
+.template-button {
+    font-size: large;
+    border: none;
+    border-bottom: 2px solid #f2f4f4;
+    color: #455a64;
+}
+.read {
+
+}
+
+.delete {
+    float: right;    
 }
