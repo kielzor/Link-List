@@ -4,8 +4,21 @@ body {
     font-weight: 800;
 }
 
+a {
+    color: #607d8b
+}
+
+li {
+    height: 200px;
+    width: 90%;
+    border: 2px #607d8b solid;
+    background-color: #fff;
+    padding: 12px 20px;
+    list-style-type: none;
+}
+
 .link-input {
-    padding-top: 200px;
+    padding-top: 10%;
     position: fixed;
     width: 50%;
     height: 100%;
@@ -45,6 +58,11 @@ body {
     background-color: #FFD773;
 }
 
+.error-message {
+    font-size: small;
+    font-weight: 400;
+}
+
 .output-pane {
     overflow: scroll;
     height: 100vh;
@@ -54,12 +72,9 @@ body {
     margin: 0;
 }
 
-.template {
-    height: 200px;
-    width: 90%;
-    border: 2px #607d8b solid;
-    background-color: #fff;
-    padding: 12px 20px;
+.counter {
+    position: relative;
+    float: right;
 }
 
 .output-title {
@@ -71,12 +86,19 @@ body {
 }
 
 .output-url {
-    margin: 17px 0px;
-    padding: 20px 0px;
+    margin: 17px 0;
+    padding: 20px 0;
     font-weight: 400;
     font-size: x-large;
     color: #607d8b;
     border-bottom: 2px solid #f2f4f4;
+}
+
+.output-hover:hover {
+    font-weight: 800;
+    color: #455a64;
+    text-decoration: none;
+    border-bottom: 2px solid #ffc107;
 }
 
 .template-button {
@@ -85,10 +107,7 @@ body {
     border-bottom: 2px solid #f2f4f4;
     color: #455a64;
 }
-.read {
 
-}
-
-.delete {
-    float: right;    
+.delete-button {
+    float: right;
 }
