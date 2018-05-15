@@ -10,6 +10,9 @@ var readTotal = 0;
 inputTitle.addEventListener("keyup", buttonEnable);
 inputUrl.addEventListener("keyup", buttonEnable);
 submitButton.addEventListener("click", makeBookmark);
+$('ul').on('click', 'li .delete-button', deleteBookmark)
+$('ul').on('click', 'li .read-button', readBookmark)
+
 
 function makeBookmark(i) {
   event.preventDefault();
@@ -25,13 +28,18 @@ function makeBookmark(i) {
     `;
     outputList.appendChild(newCard);
     deleteButton = document.querySelector(".delete-button");
-    deleteButton.addEventListener("click", deleteBookmark);
     updateTotals();
   }
 }
 
-function deleteBookmark(i) {
-  console.log("yay");
+function readBookmark() {
+  console.log('yep');
+}
+
+function deleteBookmark() {
+  var cardToBeDeleted= $(this).parent();
+  cardToBeDeleted.remove();
+  
 }
 
 function buttonEnable() {
