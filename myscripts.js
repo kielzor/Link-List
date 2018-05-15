@@ -2,10 +2,11 @@ var inputTitle = document.querySelector(".input-title");
 var inputUrl = document.querySelector(".input-url");
 var submitButton = document.querySelector(".enter-button");
 var outputList = document.querySelector(".output-list");
-var counter = document.querySelector(".counter");
+var bookmarkAmounts = document.querySelector(".bookmark-amounts");
 var errorMessage = document.querySelector(".error-message");
 var unreadTotal = 0;
 var readTotal = 0;
+var counter = 0;
 
 inputTitle.addEventListener("keyup", buttonEnable);
 inputUrl.addEventListener("keyup", buttonEnable);
@@ -14,10 +15,10 @@ $('ul').on('click', 'li .delete-button', deleteBookmark)
 $('ul').on('click', 'li .read-button', readBookmark)
 
 
-function makeBookmark(i) {
+function makeBookmark(event) {
   event.preventDefault();
   for (var i = 0; i < makeBookmark.length; i++) {
-    unreadTotal++;
+    counter++;
     var newCard = document.createElement("li");
     newCard.innerHTML = `<div class="output-title">${inputTitle.value}</div>
   <div class="output-url"><a class="output-hover" href='${inputUrl.value}'>${
@@ -37,9 +38,10 @@ function readBookmark() {
 }
 
 function deleteBookmark() {
-  var cardToBeDeleted= $(this).parent();
+  counter--;
+  var cardToBeDeleted = $(this).parent();
   cardToBeDeleted.remove();
-  
+  updateTotals();
 }
 
 function buttonEnable() {
@@ -52,5 +54,7 @@ function buttonEnable() {
 }
 
 function updateTotals() {
-  counter.innerText = "Read: " + readTotal + " Unread: " + unreadTotal;
+  console.log(counter);
+  unreadTotal = counter - readTotal;
+  bookmarkAmounts.innerText = "Read: " + readTotal + " Unread: " + unreadTotal;
 }
