@@ -11,9 +11,8 @@ var counter = 0;
 inputTitle.addEventListener("keyup", buttonEnable);
 inputUrl.addEventListener("keyup", buttonEnable);
 submitButton.addEventListener("click", makeBookmark);
-$('ul').on('click', 'li .delete-button', deleteBookmark)
-$('ul').on('click', 'li .read-button', readBookmark)
-
+$("ul").on("click", "li .delete-button", deleteBookmark);
+$("ul").on("click", "li .read-button", readBookmark);
 
 function makeBookmark(event) {
   event.preventDefault();
@@ -34,10 +33,24 @@ function makeBookmark(event) {
 }
 
 function readBookmark() {
-  console.log('yep');
+  if (this.closest("li").classList.contains("read")) {
+    this.closest("li").classList.remove("read");
+    this.classList.add("output-hover");
+    this.classList.remove("read");
+    readTotal--;
+  } else {
+    this.closest("li").classList.add("read");
+    this.classList.remove("output-hover");
+    this.classList.add("read");
+    readTotal++;
+  }
+  updateTotals();
 }
 
 function deleteBookmark() {
+  if (this.closest("li").classList.contains("read")) {
+    readTotal--;
+  }
   counter--;
   var cardToBeDeleted = $(this).parent();
   cardToBeDeleted.remove();

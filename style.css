@@ -108,6 +108,11 @@ li {
     color: #455a64;
 }
 
+.read {
+    color: red;
+    background-color: #f2f4f4;
+}
+
 .delete-button {
     float: right;
 }
