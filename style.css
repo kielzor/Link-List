@@ -79,6 +79,8 @@ li {
 }
 
 .output-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
     padding: 12px 0;
     border-bottom: 2px solid #f2f4f4;
     color: #455a64;
@@ -87,6 +89,8 @@ li {
 }
 
 .output-url {
+    overflow: hidden;
+    text-overflow: ellipsis;
     margin: 17px 0;
     padding: 20px 0;
     font-weight: 400;
@@ -117,4 +121,13 @@ li {
 
 .delete-button {
     float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .link-input,
+    .output-pane {
+        position: relative;
+        width: 100%;
+        float: none;
+    }
 }

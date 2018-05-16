@@ -27,7 +27,6 @@ function makeBookmark(event) {
     <button class="output-hover delete-button template-button">Delete</button>
     `;
     outputList.appendChild(newCard);
-    // deleteButton = document.querySelector(".delete-button");
     updateTotals();
     resetInputFields();
   }
