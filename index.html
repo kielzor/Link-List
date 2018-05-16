@@ -2,10 +2,12 @@
 <html lang="en">
 
 <head>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/Users/kieldehnert/turing/jquery/jquery.min.js"><\/script>')</script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="/Users/kieldehnert/turing/jquery/jquery.min.js"><\/script>')
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <title>Link List</title>
 </head>
@@ -25,10 +27,10 @@
             </div>
             <button class="enter-button" disabled>Enter</button>
         </form>
-        <p class="error-message">Enter all fields</p>
+        <p class="error-message">Enter Title and URL</p>
     </div>
     <div class="output-pane">
-        <p class="counter">Read: 0 Unread: 0</p>
+        <p class="bookmark-amounts">Read: 0 Unread: 0</p>
         <br>
         <ul class="output-list"></ul>
     </div>
