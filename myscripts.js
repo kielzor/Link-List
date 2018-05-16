@@ -27,8 +27,9 @@ function makeBookmark(event) {
     <button class="output-hover delete-button template-button">Delete</button>
     `;
     outputList.appendChild(newCard);
-    deleteButton = document.querySelector(".delete-button");
+    // deleteButton = document.querySelector(".delete-button");
     updateTotals();
+    resetInputFields();
   }
 }
 
@@ -67,7 +68,13 @@ function buttonEnable() {
 }
 
 function updateTotals() {
-  console.log(counter);
   unreadTotal = counter - readTotal;
   bookmarkAmounts.innerText = "Read: " + readTotal + " Unread: " + unreadTotal;
+}
+
+function resetInputFields() {
+  inputTitle.value = '';
+  inputUrl.value = '';
+  submitButton.disabled = 'true';
+  errorMessage.innerText = 'Enter all fields';
 }
