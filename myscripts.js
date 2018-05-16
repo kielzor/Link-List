@@ -1,18 +1,18 @@
 var inputTitle = document.querySelector(".input-title");
 var inputUrl = document.querySelector(".input-url");
 var submitButton = document.querySelector(".enter-button");
-var outputList = document.querySelector(".output-list");
-var bookmarkAmounts = document.querySelector(".bookmark-amounts");
 var errorMessage = document.querySelector(".error-message");
-var unreadTotal = 0;
-var readTotal = 0;
+var bookmarkAmounts = document.querySelector(".bookmark-amounts");
+var outputList = document.querySelector(".output-list");
 var counter = 0;
+var readTotal = 0;
+var unreadTotal = 0;
 
 inputTitle.addEventListener("keyup", buttonEnable);
 inputUrl.addEventListener("keyup", buttonEnable);
 submitButton.addEventListener("click", makeBookmark);
-$("ul").on("click", "li .delete-button", deleteBookmark);
 $("ul").on("click", "li .read-button", readBookmark);
+$("ul").on("click", "li .delete-button", deleteBookmark);
 
 function makeBookmark(event) {
   event.preventDefault();

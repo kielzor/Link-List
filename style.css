@@ -61,17 +61,17 @@ li {
 }
 
 .output-pane {
-    position: relative;
+    /* position: relative; */
     overflow: scroll;
     height: 100vh;
     width: 50%;
     background-color: #cfd8dc;
     float: right;
-    margin: 0;
+    /* margin: 0; */
 }
 
 .bookmark-amounts {
-    position: relative;
+    /* position: relative; */
     float: right;
 }
 
@@ -87,7 +87,7 @@ li {
 
 .output-url {
     overflow: hidden;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
     margin: 17px 0;
     padding: 20px 0;
     font-weight: 400;
@@ -108,12 +108,17 @@ li {
     border: none;
     border-bottom: 2px solid #f2f4f4;
     color: #455a64;
+    outline: none;
 }
 
 .read {
     outline: none;
     color: red;
     background-color: #f2f4f4;
+}
+
+.read:hover {
+    font-weight: 800;
 }
 
 .delete-button {
